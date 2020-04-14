@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import './App.css';
 import { HomePage } from './pages/Homepage/Homepage.component';
 import  ShopPage from './pages/shop/Shop-page';
+import Header from './header/Header'
 
 
 // const HatsPage =() =>(
@@ -14,8 +15,11 @@ import  ShopPage from './pages/shop/Shop-page';
 function App() {
   return (
     <div className="App">
-     <Route exact path='/' component ={HomePage}/>
-     <Route extact path ='/shop' component = {ShopPage}/>
+    <Header/>
+    <switch>
+       <Route exact path='/' component ={HomePage}/>
+       <Route extact path ='/shop' component = {ShopPage}/>
+     </switch>
     </div>
   );
 }
