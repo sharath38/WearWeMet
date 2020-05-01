@@ -37,15 +37,12 @@ class SignUp extends Component {
 
             await createUserProfilDocument(email, displayName)
 
-            this.setState(
-                {
-                    displayName: '',
-                    email: '',
-                    password: '',
-                    confirmPassword: '',
-                },
-                () => console.log(displayName)
-            )
+            this.setState({
+                displayName: '',
+                email: '',
+                password: '',
+                confirmPassword: '',
+            })
         } catch (error) {
             console.log(error)
         }
